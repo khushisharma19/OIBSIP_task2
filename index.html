@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PORTFOLIO</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/235bc2ef28.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <h2 class="logo">KHUSHI</h2>
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+                </ul>
+                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+            </nav>
+            <div class="header_text">
+                <p>Hello, I'm</p>
+                <h1><span>KHUSHI SHARMA</span></h1>
+                <p>B.Tech Student(AKTU)</p>
+            </div>
+        </div>
+    </div>
+    <!-----------about------------->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col">
+                    <h1 class="subtitle">About Me</h1>
+                    <p>I am a motivated and dedicated IT engineering student with a passion for technology and
+                        a drive to make a meaningful impact in the field.I have acquired a strong foundation in
+                        Information Technology principles, which I am eager to apply in real-world scenarios.</p>
+
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li>Python</li>
+                            <li>C++/C</li>
+                            <li>DSA</li>
+                            <li>HTML</li>
+                            <li>CSS</li>
+                            <li>JS</li>
+                        </ul>
+                    </div>
+
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>OASIS INFOBYTE INTERNSHIP | May 2023 - current</span><br>Web Development and
+                                Designing Intern at Oasis Infobytes.</li>
+                            <li><span>DEVSNEST INTERNSHIP | Jul 2022 - Sep 2022</span><br>Online internship of DSA at
+                                Devsnest private limited. </li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>B.Tech | Expected 2024</span><br>KIET Group of Institutions<br>Percentage : 82.63%
+                            </li>
+                            <li><span>Intermediate | 2020</span><br>C.S.H.P Memorial Public School(CBSE)<br>Percentage :
+                                89.2%</li>
+                            <li><span>High School | 2018</span><br>C.S.H.P Memorial Public School(CBSE)<br>Percentage :
+                                87.6%</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-----------projects------------->
+    <div id="projects">
+        <div class="container">
+            <h1 class="subtitle">My Projects</h1>
+            <div class="projects-list">
+                <div>
+                    <i class="fa-solid fa-code"></i>
+                    <h2>Landing-page</h2>
+                    <p>A Web Devlopment and Designing project, Landing page for cosmetic product. The page provide you
+                        basic overview of the website. Click on the link for the code.
+                    </p>
+                    <a href="https://github.com/khushisharma19/OIBSIP_task1" target="_blank"><i
+                            class="fa-solid fa-link"></i></a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-code"></i>
+                    <h2>Unemployment Analysis</h2>
+                    <p>A Data Analysis project .Data analysis is commonly used in unemployment analysis to gain insights 
+                        and understand the patterns and trends related to unemployment. Click on the link for the code.</p>
+                    <a href="#"><i class="fa-solid fa-link"></i></a>
+                </div>
+            </div>
+            <a href="#" class="btn">See more</a>
+        </div>
+    </div>
+
+    <!------------contact---------->
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="subtitle">Contact Me</h1>
+                    <p><i class="fa-sharp fa-solid fa-paper-plane"></i>sharmakhushi177ks@gmail.com</p>
+                    <p><i class="fa-solid fa-square-phone"></i>0123456789</p>
+                    <div class="social-icons">
+                        <a href="https://www.linkedin.com/in/khushi-sharma-419a2122b/"><i
+                                class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://instagram.com/khushish19?igshid=MzNlNGNkZWQ4Mg==">
+                            <i class="fa-brands fa-instagram"></i></a>
+                        <a href="#"><i class="fa-brands fa-twitter-square"></i></a>
+                    </div>
+                    <a href="Images/khushi_resume.pdf" download class="btn btn2">Download Resume</a>
+                </div>
+                <div class="contact-right">
+                    <form>
+                        <input type="text" name="name" placeholder="Your Name" required>
+                        <input type="email" name="email" placeholder="Your Email" required>
+                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn btn2">Sumbit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            var tablinks = document.getElementsByClassName("tab-links");
+            var tabcontents = document.getElementsByClassName("tab-contents");
+            function opentab(tabname) {
+                for (tablink of tablinks) {
+                    tablink.classList.remove("active-link");
+                }
+                for (tabcontent of tabcontents) {
+                    tabcontent.classList.remove("active-tab");
+                }
+                event.currentTarget.classList.add("active-link");
+                document.getElementById(tabname).classList.add("active-tab");
+            }
+
+        </script>
+
+        <script>
+            var sidemenu = document.getElementById("sidemenu");
+            function openmenu(){
+                sidemenu.style.right="0";
+            }
+            function closemenu(){
+                sidemenu.style.right="-200px";
+            }
+        </script>
+</body>
+
+</html>
